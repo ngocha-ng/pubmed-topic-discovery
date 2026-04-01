@@ -1,2 +1,8 @@
 requests==2.31.0
 python-dotenv==1.0.0
+sentence-transformers
+scikit-learn
+scipy
+numpy
+pandas
+plotly

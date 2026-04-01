@@ -2,11 +2,21 @@
 
 An end-to-end NLP pipeline that fetches, processes, clusters, and visualizes biomedical literature from PubMed — deployed as an interactive app on Hugging Face Spaces.
 
+
 ## Project overview
 
-This project collects 20,000+ research articles per domain from the NCBI PubMed database, generates biomedical embeddings, clusters them by topic, and surfaces insights through an interactive visualization.
+This project shows how scientific platforms can surface insights from large-scale biomedical literature.
 
-**Domains covered**
+Analyzes 20,000+ research articles per domain from PubMed to uncover trends in drug discovery and oncology using NLP and data analytics.
+
+**Features:**
+
+    - Automated data ingestion and processing
+    - Biomedical embeddings for text understanding
+    - Trend analysis and topic exploration
+    - Interactive visualizations for insight discovery
+
+**Domains covered:**
 - Drug discovery — drug discovery, small molecule, target identification, lead optimization
 - Oncology — oncology, immunotherapy, CAR-T, tumor microenvironment, mRNA cancer vaccine
 
@@ -15,10 +25,28 @@ This project collects 20,000+ research articles per domain from the NCBI PubMed 
 | Phase | Description | Status |
 |-------|-------------|--------|
 | 1 — Data collection | Bulk fetch from PubMed via NCBI E-utilities API | ✅ Done |
-| 2 — Preprocessing | Clean text, generate embeddings (BiomedBERT) | 🔜 Next |
-| 3 — Clustering | UMAP dimensionality reduction + HDBSCAN clustering | 🔜 Planned |
-| 4 — App | Gradio interactive cluster explorer | 🔜 Planned |
-| 5 — Deploy | Hugging Face Spaces | 🔜 Planned |
+| 2 — Text processing | Clean text, TF-IDF + sentence embeddings (BiomedBERT) | ✅ Done |
+| 3 — Trend analysis | Publication trends, MeSH heatmaps, keyword shifts (Plotly) | ✅ Done |
+| 4 — Clustering | UMAP dimensionality reduction + HDBSCAN clustering | 🔜 Planned |
+| 5 — App | Gradio interactive cluster explorer | 🔜 Planned |
+| 6 — Deploy | Hugging Face Spaces | 🔜 Planned |
+
+## Repo structure
+
+```
+pubmed-topic-discovery/
+├── data/
+│   ├── raw/                        # CSVs from Phase 1 (not in git)
+│   └── processed/                  # Embeddings and metadata from Phase 2 (not in git)
+├── charts/                         # HTML charts from Phase 3 (not in git)
+├── pubmed_fetcher.py               # Phase 1 — data collection
+├── process_abstracts.py            # Phase 2 — text processing
+├── trend_analysis.py               # Phase 3 — trend analysis
+├── requirements.txt
+├── README.md
+├── .gitignore
+└── .env                            # never pushed
+```
 
 ## Data schema
 
