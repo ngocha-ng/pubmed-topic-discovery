@@ -2,6 +2,11 @@
 
 An end-to-end NLP pipeline that fetches, processes, clusters, and visualizes biomedical literature from PubMed — deployed as an interactive app on Hugging Face Spaces.
 
+## Live charts
+
+Explore the interactive trend analysis charts:
+👉 [https://ngocha-ng.github.io/pubmed-topic-discovery/](https://ngocha-ng.github.io/pubmed-topic-discovery/)
+
 
 ## Project overview
 
