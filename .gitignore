@@ -1,0 +1,16 @@
+# environment
+.env
+
+# data files — stored separately, not in git
+*.csv
+*.json
+
+# python
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+
+# editors
+.vscode/
+.idea/
